@@ -1,63 +1,121 @@
 # Agentic-GraphRAG-Dialog-Eval
 
-A controlled, comparative evaluation of three retrieval-based chatbot architectures for **Romanized Nepali customer-support dialogue**. This project aims to identify which architecture performs best across different types of user queries, rather than claiming a single “best” solution.
+Research benchmark for comparing retrieval-augmented generation architectures on **Romanized Nepali customer-support dialogue**. The repository currently implements **Phase 1: Traditional Semantic RAG** as a controlled baseline.
 
 Prepared for submission to **WOCHAT 2026**.
 
-## Overview
-Customer support chats in Romanized Nepali are messy—mixing Nepali and English, slang, abbreviations, and frequent typos. A fluent chatbot is not enough; it must provide answers grounded in actual business rules (delivery, refunds, payments) without hallucinating policies.
+## Project Goal
 
-This repository will run **the same dataset** and **the same knowledge base** through three different retrieval architectures to fairly evaluate correctness, faithfulness, robustness, latency, and cost.
+The benchmark compares three systems on the same customer queries and ChitoMart business policy corpus:
 
-## Architectures evaluated
-To ensure a fair comparison, the base LLM, embedding model, business documents, and evaluation rubric remain constant. Only the retrieval/control architecture changes.
+1. Traditional Semantic RAG
+2. Agentic RAG
+3. Agentic GraphRAG
 
-| Architecture | Pipeline highlights | Expected strength |
-|---|---|---|
-| Traditional Semantic RAG | User query → embedding search → top-k chunks → LLM answer | Fast, simple, and cheap. Ideal for direct FAQ-style questions. |
-| Agentic RAG | Intent detection → reformulation → retrieval → verification → answer | Stronger intent handling and clarification for ambiguous or noisy queries. |
-| Agentic GraphRAG | Entity/relation graph → agentic graph/semantic lookup → answer | Excels at multi-hop reasoning, policy relationships, and area-based rules. |
+Phase 1 implements only the first system:
 
-## Dataset & benchmarks
-The evaluation relies on a custom benchmark of **60–100 realistic Romanized Nepali customer-support questions**, categorized to test specific system capabilities:
+```text
+customer query -> embed query -> semantic vector search -> retrieve top-k chunks -> grounded answer -> JSONL prediction
+```
 
-- **Simple factual:** direct retrieval (e.g., “delivery charge kati ho?”)
-- **Policy-based:** hallucination control (e.g., “damaged product aayo vane refund huncha?”)
-- **Multi-hop:** rule combination (e.g., “Baneshwor ma Rs.1500 ko order garda free delivery huncha?”)
-- **Ambiguous:** intent detection (e.g., “mero order bigriyo aba k garne?”)
-- **Code-mixed:** Nepali-English understanding (e.g., “payment failed vayo but paisa katyo what should I do?”)
-- **Noisy/typo:** robustness to spelling (e.g., “dilivery kati lagxa ktm ma?”)
-- **Complaint tone:** helpful and respectful tone (e.g., “timi haru le wrong item pathayau”)
+Agentic RAG and Agentic GraphRAG are future phases and are intentionally excluded from the current baseline.
 
-## Evaluation metrics
-Outputs are evaluated using a mix of human scoring (1–5 scale) and automated metrics.
+## Phase 1 Components
 
-Qualitative (human-scored):
-- Answer correctness (matches business rules)
-- Faithfulness (grounded in retrieved evidence)
-- Helpfulness (solves the customer’s problem)
-- Romanized Nepali naturalness
-- Robustness (handling typos, slang, and mixed language)
-- Clarification behavior (asks for missing info when needed)
+- Business knowledge: `data/business_docs/*.md`
+- Raw customer-message dataset: `data/raw/Crowpeaks - label test data - 6K Sample.csv`
+- Prepared evaluation queries: `data/processed/eval_queries_v1.csv`
+- Chroma vector index: `.chroma/semantic_rag`
+- Predictions: `results/predictions/semantic_rag_v1.jsonl`
 
-Quantitative (automated):
-- Latency (average response time in seconds)
-- Cost (token usage and model-call count per query)
+The raw Crowpeaks CSV is used only as a source of evaluation queries. It is not used as a knowledge base.
 
-## Quick start (development workflow)
-This project is structured as a 7-day sprint:
+## Setup
 
-1. Day 1–2: finalize domain and create the business knowledge base (documents) + dataset queries
-2. Day 3: implement Traditional Semantic RAG baseline and logging format
-3. Day 4: implement Agentic RAG workflow
-4. Day 5: implement Agentic GraphRAG workflow
-5. Day 6: run experiments, score outputs, and collect latency/cost data
-6. Day 7: analyze results and draft the 4-page short paper
+Install `uv`, then run commands from the repository root.
 
-(Code execution and environment setup instructions will be added once the baseline implementation is complete.)
+```bash
+uv sync --dev
+cp .env.example .env
+```
 
-## References
-- WOCHAT 2026 CFP: Workshop on Chatbots and Agentic Technologies.
-- Lewis et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.*
-- Edge et al. (2024). *From Local to Global: A Graph RAG Approach to Query-Focused Summarization.*
-- Singh et al. (2025). *Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG.*
+Environment variables:
+
+```bash
+LLM_PROVIDER=auto
+GEMINI_API_KEY=
+GEMINI_BASE_URL=https://generativelanguage.googleapis.com/v1beta
+GEMINI_MODEL=gemini-2.5-flash
+NVIDIA_API_KEY=
+NVIDIA_BASE_URL=https://integrate.api.nvidia.com/v1
+NVIDIA_MODEL=meta/llama-3.1-8b-instruct
+EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+```
+
+`LLM_PROVIDER` can be `auto`, `gemini`, or `nvidia`. In `auto` mode, the runner chooses Gemini when `GEMINI_API_KEY` is set, otherwise NVIDIA when `NVIDIA_API_KEY` is set. API keys are optional for retrieval-only testing; if no supported key is set, the benchmark still runs retrieval and writes predictions with a generation-skipped placeholder answer.
+
+## Run Phase 1
+
+Place the raw dataset here:
+
+```text
+data/raw/Crowpeaks - label test data - 6K Sample.csv
+```
+
+Prepare evaluation queries:
+
+```bash
+uv run python experiments/prepare_eval_queries.py --limit 100
+```
+
+Build or rebuild the semantic Chroma index:
+
+```bash
+uv run python experiments/build_semantic_index.py --rebuild
+```
+
+Run the Traditional Semantic RAG baseline:
+
+```bash
+uv run python experiments/run_semantic_rag.py --limit 20 --top-k 4
+```
+
+Run tests:
+
+```bash
+uv run pytest
+```
+
+## Output Format
+
+Predictions are JSONL records with the stable schema:
+
+```json
+{
+  "id": "Q0001",
+  "system": "semantic_rag",
+  "query": "...",
+  "intent": "...",
+  "retrieved_context": [
+    {
+      "chunk_id": "...",
+      "source": "...",
+      "content": "...",
+      "score": 0.123
+    }
+  ],
+  "answer": "...",
+  "latency_ms": 1234,
+  "metadata": {
+    "top_k": 4,
+    "embedding_model": "...",
+    "embedding_backend": "...",
+    "llm_model": "...",
+    "llm_provider": "..."
+  }
+}
+```
+
+## Phase Boundaries
+
+Phase 1 does not implement query rewriting, intent routing, verifier agents, graph extraction, graph traversal, reranking, or planning. Keeping this baseline simple makes later comparison against Agentic RAG and Agentic GraphRAG fair.

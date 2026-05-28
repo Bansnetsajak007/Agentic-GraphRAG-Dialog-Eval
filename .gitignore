@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.chroma/
+data/raw/*.csv
+data/processed/*.csv
+results/predictions/*.jsonl
+results/scores/*
+!results/scores/.gitkeep
