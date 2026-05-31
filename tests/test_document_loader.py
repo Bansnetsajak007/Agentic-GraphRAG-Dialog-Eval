@@ -27,6 +27,19 @@ def test_load_document_chunks_adds_source_and_chunk_ids(tmp_path: Path) -> None:
     assert chunks[0].metadata["chunk_index"] == 1
 
 
+def test_load_document_chunks_supports_nested_company_dirs(tmp_path: Path) -> None:
+    docs_dir = tmp_path / "business_docs"
+    company_dir = docs_dir / "chitomart"
+    company_dir.mkdir(parents=True)
+    (company_dir / "policy.md").write_text("Delivery charge is NPR 60.", encoding="utf-8")
+
+    chunks = load_document_chunks(docs_dir, chunk_size=500, overlap=100)
+
+    assert chunks[0].chunk_id == "chitomart__policy-001"
+    assert chunks[0].source == "chitomart/policy.md"
+    assert chunks[0].metadata["company"] == "chitomart"
+
+
 def test_deterministic_chunks_overlap() -> None:
     chunks = deterministic_chunks("abcdefghij", chunk_size=6, overlap=2)
 

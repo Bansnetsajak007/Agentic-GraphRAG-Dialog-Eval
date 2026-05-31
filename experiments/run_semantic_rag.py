@@ -23,6 +23,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run Traditional Semantic RAG predictions.")
     parser.add_argument("--limit", type=int, default=None, help="Maximum number of queries to run.")
     parser.add_argument("--top-k", type=int, default=4, help="Number of chunks to retrieve.")
+    parser.add_argument("--company", default=None, help="Company-specific index to query, e.g. chitomart.")
     parser.add_argument("--delay-seconds", type=float, default=0.0, help="Delay between LLM calls for rate-limited providers.")
     parser.add_argument("--resume", action="store_true", help="Append to existing predictions and skip already processed IDs.")
     return parser.parse_args()
@@ -47,6 +48,7 @@ def main() -> int:
             collection_name=settings.collection_name,
             embedding_model_name=settings.embedding_model,
             top_k=args.top_k,
+            company=args.company,
         )
         chat_model = build_chat_model(settings)
         pipeline = SemanticRAGPipeline(

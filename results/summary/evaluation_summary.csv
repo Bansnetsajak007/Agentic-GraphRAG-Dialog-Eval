@@ -1,0 +1,4 @@
+architecture,output_path,total_queries,successful_queries,failed_queries,average_latency_ms,average_retrieved_chunks
+traditional_rag,/mnt/elements/Research/Agentic-GraphRAG-Dialog-Eval/results/traditional_rag/eval_results.jsonl,300,300,0,2524.2,4.0
+agentic_rag,/mnt/elements/Research/Agentic-GraphRAG-Dialog-Eval/results/agentic_rag/eval_results.jsonl,300,300,0,2637.4,4.0
+agentic_graph_rag,/mnt/elements/Research/Agentic-GraphRAG-Dialog-Eval/results/agentic_graph_rag/eval_results.jsonl,300,300,0,3099.4,4.0

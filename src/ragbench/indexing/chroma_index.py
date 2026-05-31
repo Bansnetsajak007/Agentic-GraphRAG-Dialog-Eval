@@ -6,13 +6,17 @@ import hashlib
 import json
 import math
 import os
+import random
 import re
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Any
 from typing import Iterable
+
+import httpx
 
 from ragbench.schemas import DocumentChunk
 
@@ -22,8 +26,25 @@ class SentenceTransformerEmbedding:
         self.model_name = model_name
         self.fallback_dim = fallback_dim
         self.backend = "auto"
+        self.provider = os.getenv("EMBEDDING_PROVIDER", "sentence-transformers").lower()
+        self.gemini = GeminiEmbeddingClient.from_env(model_name, fallback_dim)
 
     def encode(self, texts: list[str]) -> list[list[float]]:
+        return self.encode_documents(texts)
+
+    def encode_documents(self, texts: list[str], titles: list[str] | None = None) -> list[list[float]]:
+        if self.provider == "gemini" or self.model_name.startswith("gemini-"):
+            self.backend = "gemini"
+            return self.gemini.encode_documents(texts, titles=titles)
+        return self._encode_local(texts)
+
+    def encode_query(self, query: str) -> list[float]:
+        if self.provider == "gemini" or self.model_name.startswith("gemini-"):
+            self.backend = "gemini"
+            return self.gemini.encode_query(query)
+        return self._encode_local([query])[0]
+
+    def _encode_local(self, texts: list[str]) -> list[list[float]]:
         backend = os.getenv("RAGBENCH_EMBEDDING_BACKEND", "auto").lower()
         if backend == "hash" or self.backend in {"hash", "hash_fallback"}:
             self.backend = "hash"
@@ -40,6 +61,120 @@ class SentenceTransformerEmbedding:
         except Exception:
             self.backend = "hash_fallback"
             return [hash_embedding(text, dim=self.fallback_dim) for text in texts]
+
+
+class GeminiEmbeddingClient:
+    def __init__(
+        self,
+        model_name: str,
+        api_keys: tuple[str, ...],
+        base_url: str,
+        output_dimensionality: int,
+        timeout_seconds: float = 60.0,
+        max_retries: int = 8,
+    ):
+        self.model_name = model_name
+        self.api_keys = self._dedupe_keys(api_keys)
+        self.api_key = self.api_keys[0] if self.api_keys else None
+        self.key_index = 0
+        self.base_url = base_url.rstrip("/")
+        self.output_dimensionality = output_dimensionality
+        self.timeout_seconds = timeout_seconds
+        self.max_retries = max_retries
+
+    @classmethod
+    def from_env(cls, model_name: str, output_dimensionality: int) -> "GeminiEmbeddingClient":
+        keys = []
+        primary = os.getenv("GEMINI_API_KEY")
+        if primary:
+            keys.append(primary)
+        keys.extend(key.strip() for key in os.getenv("GEMINI_API_KEYS", "").split(",") if key.strip())
+        return cls(
+            model_name=model_name,
+            api_keys=tuple(keys),
+            base_url=os.getenv("GEMINI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta"),
+            output_dimensionality=int(os.getenv("EMBEDDING_DIMENSIONS", str(output_dimensionality))),
+        )
+
+    def encode_documents(self, texts: list[str], titles: list[str] | None = None) -> list[list[float]]:
+        titles = titles or ["" for _ in texts]
+        return [
+            self._embed(text=f"title: {title} | text: {text}", task_type="RETRIEVAL_DOCUMENT")
+            for title, text in zip(titles, texts)
+        ]
+
+    def encode_query(self, query: str) -> list[float]:
+        return self._embed(text=f"task: question answering | query: {query}", task_type="RETRIEVAL_QUERY")
+
+    def _embed(self, text: str, task_type: str) -> list[float]:
+        if not self.api_key:
+            raise RuntimeError("Gemini embedding selected but GEMINI_API_KEY/GEMINI_API_KEYS is not set.")
+
+        payload: dict[str, Any] = {
+            "content": {"parts": [{"text": text}]},
+            "taskType": task_type,
+            "outputDimensionality": self.output_dimensionality,
+        }
+        url = f"{self.base_url}/models/{self.model_name}:embedContent"
+        last_error: Exception | None = None
+
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = httpx.post(
+                    url,
+                    headers={
+                        "x-goog-api-key": self.api_key,
+                        "Content-Type": "application/json",
+                    },
+                    json=payload,
+                    timeout=self.timeout_seconds,
+                )
+                if response.status_code not in {429, 500, 502, 503, 504}:
+                    response.raise_for_status()
+                    return list(response.json()["embedding"]["values"])
+                response.raise_for_status()
+            except (httpx.HTTPStatusError, httpx.TimeoutException, httpx.TransportError) as exc:
+                last_error = exc
+                if attempt >= self.max_retries:
+                    raise
+                self._select_different_key()
+                time.sleep(self._retry_sleep_seconds(exc, attempt))
+
+        if last_error:
+            raise last_error
+        raise RuntimeError("Gemini embedding request failed without a response.")
+
+    def _select_different_key(self) -> bool:
+        if len(self.api_keys) <= 1:
+            return False
+        current_index = self.key_index
+        choices = [index for index in range(len(self.api_keys)) if index != current_index]
+        self.key_index = random.choice(choices)
+        self.api_key = self.api_keys[self.key_index]
+        return True
+
+    @staticmethod
+    def _dedupe_keys(keys: tuple[str, ...]) -> tuple[str, ...]:
+        deduped: list[str] = []
+        seen: set[str] = set()
+        for key in keys:
+            clean_key = key.strip()
+            if clean_key and clean_key not in seen:
+                deduped.append(clean_key)
+                seen.add(clean_key)
+        return tuple(deduped)
+
+    @staticmethod
+    def _retry_sleep_seconds(exc: Exception, attempt: int) -> float:
+        if isinstance(exc, httpx.HTTPStatusError) and exc.response.status_code == 429:
+            retry_after = exc.response.headers.get("retry-after")
+            if retry_after:
+                try:
+                    return min(float(retry_after), 90.0)
+                except ValueError:
+                    pass
+            return 60.0
+        return float(min(2**attempt, 8))
 
 
 def hash_embedding(text: str, dim: int = 384) -> list[float]:
@@ -102,10 +237,18 @@ def get_or_create_collection(persist_dir: Path, collection_name: str) -> Any:
     return client.get_or_create_collection(name=collection_name, metadata={"hnsw:space": "cosine"})
 
 
+def company_collection_name(base_name: str, company: str) -> str:
+    clean_company = re.sub(r"[^a-z0-9_]+", "_", company.lower()).strip("_")
+    return f"{base_name}_{clean_company}" if clean_company else base_name
+
+
 def rebuild_collection(persist_dir: Path, collection_name: str) -> Any:
-    if persist_dir.exists():
-        shutil.rmtree(persist_dir)
-    return get_or_create_collection(persist_dir, collection_name)
+    client = get_chroma_client(persist_dir)
+    try:
+        client.delete_collection(collection_name)
+    except Exception:
+        pass
+    return client.get_or_create_collection(name=collection_name, metadata={"hnsw:space": "cosine"})
 
 
 def build_chroma_index(
@@ -130,7 +273,10 @@ def build_chroma_index(
     if not new_chunks:
         return 0
 
-    embeddings = embedder.encode([chunk.content for chunk in new_chunks])
+    embeddings = embedder.encode_documents(
+        [chunk.content for chunk in new_chunks],
+        titles=[chunk.source for chunk in new_chunks],
+    )
     collection.add(
         ids=[chunk.chunk_id for chunk in new_chunks],
         documents=[chunk.content for chunk in new_chunks],

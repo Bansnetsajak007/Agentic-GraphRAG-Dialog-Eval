@@ -22,7 +22,7 @@ customer query -> embed query -> Chroma vector search -> top-k chunks -> grounde
 
 - Raw customer messages: `data/raw/Crowpeaks - label test data - 6K Sample.csv`
 - Processed evaluation queries: `data/processed/eval_queries_v1.csv`
-- Business documents: `data/business_docs/*.md`
+- Business documents: `data/business_docs/**/*.md`
 
 ## Outputs
 

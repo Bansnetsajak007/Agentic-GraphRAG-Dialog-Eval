@@ -1,0 +1,301 @@
+query_id,company,topic,difficulty,query_type,language_style,query_romanized
+QC001,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,mero order kata pugyo?
+QC002,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,order cancel kasari garne?
+QC003,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,return policy k cha?
+QC004,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,out of stock item order garna milcha?
+QC005,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,voucher apply kina bhayena?
+QC006,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,order status kasari herne?
+QC007,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,cancel garepachi refund kati din ma aaucha?
+QC008,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,wrong item aayo bhane kasari return garne?
+QC009,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,substitute item kasari approve garne?
+QC010,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,invoice kasari download garne?
+QC011,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,delivery kati bela aaucha?
+QC012,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,COD order cancel garda charge lagcha?
+QC013,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,damaged product ko replacement huncha?
+QC014,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,product available cha ki chaina kasari herne?
+QC015,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,cashback kati din ma aaucha?
+QC016,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,mero order ajhai pending dekhairako cha kina?
+QC017,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,paid order cancel garna milcha?
+QC018,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,return pickup kati din ma huncha?
+QC019,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,price change bhayo bhane old price nai lagcha?
+QC020,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,payment failed bhayo aba k garne?
+QC021,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,rider ko number kasari paune?
+QC022,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,refund status kasari check garne?
+QC023,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,opened packet return garna milcha?
+QC024,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,low stock dekhako item confirm huncha ki cancel huna sakcha?
+QC025,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,COD available cha ki chaina?
+QC026,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,same day delivery huncha ki hudaina?
+QC027,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,voucher use gareko order cancel garda voucher firta aaucha?
+QC028,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,expiry near product return huncha?
+QC029,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,preferred brand unavailable bhaye k huncha?
+QC030,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,wallet payment support cha?
+QC031,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,order confirm bhayepachi kati time lagcha?
+QC032,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,partial cancel garna milcha?
+QC033,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,fresh vegetables return garna milcha ki hudaina?
+QC034,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,cart ma item cha tara checkout ma unavailable kina?
+QC035,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,minimum order value kati ho?
+QC036,QuickCommerce / E-commerce Company,delivery_order_status,simple,fact_lookup,romanized_nepali_mixed_english,delivery charge kati lagcha?
+QC037,QuickCommerce / E-commerce Company,cancellation_refund,simple,fact_lookup,romanized_nepali_mixed_english,order packing bhayepachi cancel huncha ki hudaina?
+QC038,QuickCommerce / E-commerce Company,return_replacement,simple,fact_lookup,romanized_nepali_mixed_english,replacement ko lagi photo upload garnu parcha?
+QC039,QuickCommerce / E-commerce Company,product_availability_substitution,simple,fact_lookup,romanized_nepali_mixed_english,expiry date kasari check garne before delivery?
+QC040,QuickCommerce / E-commerce Company,payment_voucher_invoice,simple,fact_lookup,romanized_nepali_mixed_english,promo code ek choti matra use huncha?
+QC041,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,"maile order place gareko 2 ghanta bhayo tara rider assign bhayeko chaina, aba k garne?"
+QC042,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"maile online payment gareko order cancel gare, paisa wallet ma aayo tara bank ma chahiyo, kasari transfer garne?"
+QC043,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"maile rice 5kg order gareko, 3kg matra aayo, missing quantity ko refund kasari claim garne?"
+QC044,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,"app ma delivered dekhayo tara maile saman payeko chaina, kasari complain garne?"
+QC045,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"merchant le item unavailable bhanyo tara app ma cancel option chaina, refund kasari paune?"
+QC046,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"milk packet leak bhayera delivery bhayo, rider agadi nai photo linu parcha ki pachhi support ma enough huncha?"
+QC047,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,"delivery address ma landmark wrong haleko chu, rider lai update garna milcha?"
+QC048,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"maile duplicate order gareko chu, euta cancel garera paid amount refund kasari lina milcha?"
+QC049,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"product ko seal broken cha tara maile use gareko chaina, return accept huncha?"
+QC050,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,rider le call gareko miss bhayo ani order cancel hune ho ki reattempt huncha?
+QC051,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"order ko ek matra item cancel garna khojeko chu tara whole order cancel option matra cha, aba k garne?"
+QC052,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"maile buy one get one offer ma order gareko, free item missing cha, refund kasari calculate huncha?"
+QC053,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,"ma office bata ghar shift bhaye, existing order ko address change garna kasari request garne?"
+QC054,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"delivery already dispatched bhayepachi cancel garna paryo, cancellation fee lagcha ki full refund huncha?"
+QC055,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"fresh fruits quality ramro chaina, same din complaint nagare return huncha ki hudaina?"
+QC056,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,delivery late bhayo bhane delivery charge refund huncha ki hudaina?
+QC057,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"refund initiated bhanyo tara 7 din bhayo paisa aayena, bank reference number kasari paune?"
+QC058,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"wrong brand ko product aayo tara price same cha, replacement compulsory ho ki refund milcha?"
+QC059,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,"order tracking ma stuck at packed dekhairako cha, actual status kasari thaha paune?"
+QC060,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,cashback use gareko order cancel garda cashback deduct huncha ki remaining balance ma bascha?
+QC061,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"return pickup ma rider le item lina manena packaging chaina bhanera, aba ke garne?"
+QC062,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,"maile scheduled delivery choose gareko thiye tara app le asap dekhayo, fix kasari garne?"
+QC063,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"card payment failed bhayo tara order confirmed bhayo, refund process k huncha?"
+QC064,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"product damaged cha tara app ma return button disabled cha, support ticket kasari open garne?"
+QC065,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,"rider le gate ma saman chhodyo tara app ma OTP magcha, yo normal ho?"
+QC066,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"cancelled order ko invoice needed cha accounting ko lagi, kasari download garne?"
+QC067,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"perishable item ko complaint time limit kati ho, 24 hours ki delivery same day matra?"
+QC068,QuickCommerce / E-commerce Company,delivery_order_status,medium,procedural,romanized_nepali_mixed_english,mero area ma delivery available cha ki chaina kasari check garne?
+QC069,QuickCommerce / E-commerce Company,cancellation_refund,medium,procedural,romanized_nepali_mixed_english,"maile subscription grocery order cancel gare, next recurring order pani cancel huncha ki hudaina?"
+QC070,QuickCommerce / E-commerce Company,return_replacement,medium,procedural,romanized_nepali_mixed_english,"combo order ma euta item damaged cha, full combo return huncha ki partial refund?"
+QC071,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,"maile baby formula specific brand order gareko, unavailable bhayo bhane substitute accept garnu safe ho ki cancel better, policy le ke bhancha?"
+QC072,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,"maile voucher, wallet balance ra card tinai use gareko split payment order cancel bhayo, refund kun source ma kati jane?"
+QC073,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"maile order receive garepachi 3 din pachi wrong item notice gare, policy strict cha bhane exception paune chance cha?"
+QC074,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,"checkout bela discount apply bhayo tara picker le higher price substitute propose garyo, customer approval bina charge badhna milcha?"
+QC075,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,"payment success bhayo tara order create bhayena, bank statement ra app transaction id diye pachhi resolution SLA kati huncha?"
+QC076,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"rider rude behavior, missing item ra refund delay tinai issue eutai ticket ma rakhna milcha ki separate ticket banaune?"
+QC077,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,"cart ma 10 item thiye, 2 unavailable, 1 substitute, 1 damaged delivered, final bill ra refund kasari reconcile garne?"
+QC078,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,"maile corporate invoice ko lagi PAN/VAT details chahiyo tara order already delivered cha, invoice correction possible cha?"
+QC079,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"neighbor le mero OTP bina order receive gareko bhancha, proof of delivery dispute kasari investigate huncha?"
+QC080,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,"maile allergy bhako ingredient avoid garna note haleko thiye tara substitute ma same ingredient paryo, return/refund eligibility k huncha?"
+QC081,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,promo code apply bhayeko order ma partial return garepachi discount proportionally deduct huncha ki full voucher void huncha?
+QC082,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"maile product photo fake jasto lagyo, delivered item listing sanga match gardaina, marketplace quality complaint kasari handle huncha?"
+QC083,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,"product page ma in stock dekhayo tara payment pachhi out of stock bhanera cancel garyo, company le compensation dincha ki only refund?"
+QC084,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,delivery charge late delivery guarantee ma refund huncha bhane coupon discount sanga combine garna milcha?
+QC085,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"delivery boy le extra cash mageko cha bhanera complaint gare, refund matra ho ki disciplinary action pani huncha?"
+QC086,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,"same product ko MRP app ma kam dekhiyo tara delivered packet ma high MRP cha, pricing dispute kasari handle huncha?"
+QC087,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,"maile cash on delivery choose gareko tara rider le QR payment garna bhanyo, company policy le allow garcha?"
+QC088,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"app ma no return item bhancha tara product expired cha, no return policy override huncha?"
+QC089,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,"merchant le substitute ma cheaper item pathayo tara refund difference aayena, proof ke chahincha?"
+QC090,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,"app bug le double payment dekhaeko cha tara ek order matra cha, duplicate charge verify garna kun documents chahincha?"
+QC091,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"customer care le refund initiated bhanyo, finance team le rejected bhanyo, final escalation path k ho?"
+QC092,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,subscription order ma regular product unavailable bhaye automatic substitution huncha ki every time approval chaincha?
+QC093,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,"refund wallet ma credit bhayo tara maile original card ma chahanchu, policy ma source reversal mandatory ho?"
+QC094,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,festival rush ma late delivery common bhanera compensation deny garna milcha ki published SLA still valid huncha?
+QC095,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,flash sale item out of stock bhaye voucher firta aaucha ki same discount future order ma apply huncha?
+QC096,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,"business account ma monthly invoice chahiyo, individual orders ko bill consolidate garna milcha?"
+QC097,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"maile same issue 3 choti face gare, account ma service credit demand garna milcha?"
+QC098,QuickCommerce / E-commerce Company,product_availability_substitution,complex,multi_hop,romanized_nepali_mixed_english,medicine jasto regulated item quick-commerce ma listed cha bhane prescription/availability policy kasari verify garne?
+QC099,QuickCommerce / E-commerce Company,payment_voucher_invoice,complex,multi_hop,romanized_nepali_mixed_english,gift card use gareko order return garda gift card expiry same rahanchha ki extend huncha?
+QC100,QuickCommerce / E-commerce Company,support_edge_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"policy document ma 5 din refund bhancha tara support le 10 din bhancha, kun answer lai trust garne?"
+HC001,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,"mero website down cha, k garne?"
+HC002,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,DNS record kasari add garne?
+HC003,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,SSL certificate kasari install garne?
+HC004,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,VPS plan upgrade garna milcha?
+HC005,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,support ticket kasari create garne?
+HC006,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,server uptime guarantee kati cha?
+HC007,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,domain renew kasari garne?
+HC008,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,free SSL available cha?
+HC009,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,invoice kasari download garne?
+HC010,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,priority support available cha?
+HC011,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,SLA credit kasari claim garne?
+HC012,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,nameserver update kati time lagcha?
+HC013,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,SSL expire bhayo aba k garne?
+HC014,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,auto renewal off kasari garne?
+HC015,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,website migration free cha?
+HC016,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,planned maintenance kaile huncha kasari thaha paune?
+HC017,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,A record ra CNAME farak k ho?
+HC018,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,mixed content error k ho?
+HC019,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,billing cycle monthly bata yearly garna milcha?
+HC020,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,email account kasari create garne?
+HC021,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,VPS reboot kasari garne?
+HC022,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,domain transfer garna milcha?
+HC023,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,HTTPS force kasari garne?
+HC024,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,late payment grace period kati cha?
+HC025,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,mailbox storage limit kati cha?
+HC026,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,server status page kaha cha?
+HC027,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,DNS propagation kati ghanta lagcha?
+HC028,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,wildcard SSL support cha?
+HC029,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,account suspend kina bhayo?
+HC030,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,cPanel login kaha bata garne?
+HC031,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,downtime ticket priority k huncha?
+HC032,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,subdomain kasari banaune?
+HC033,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,SSL renew automatic huncha?
+HC034,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,refund policy k cha hosting ma?
+HC035,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,SSH access available cha?
+HC036,Hosting / Cloud Provider,server_downtime_sla,simple,fact_lookup,romanized_nepali_mixed_english,shared hosting slow bhayo kina?
+HC037,Hosting / Cloud Provider,dns_domain,simple,fact_lookup,romanized_nepali_mixed_english,MX record kaha halne?
+HC038,Hosting / Cloud Provider,ssl_security,simple,fact_lookup,romanized_nepali_mixed_english,CSR generate kasari garne?
+HC039,Hosting / Cloud Provider,billing_plan_vps,simple,fact_lookup,romanized_nepali_mixed_english,trial plan available cha?
+HC040,Hosting / Cloud Provider,support_migration_email,simple,fact_lookup,romanized_nepali_mixed_english,database password reset kasari garne?
+HC041,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,"mero VPS ping huncha tara website open hudaina, first troubleshoot steps k k hun?"
+HC042,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,"maile nameserver change gareko 24 ghanta bhayo tara site purano server ma khulcha, kasari diagnose garne?"
+HC043,Hosting / Cloud Provider,ssl_security,medium,procedural,romanized_nepali_mixed_english,"SSL install bhayepani browser le not secure bhancha, chain certificate issue kasari fix garne?"
+HC044,Hosting / Cloud Provider,support_migration_email,medium,procedural,romanized_nepali_mixed_english,"maile WordPress site migrate garna request gareko, downtime minimize garna DNS cutover plan k huncha?"
+HC045,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,"server down 40 minute bhayo, SLA credit pauna monitoring proof chahincha ki company logs enough huncha?"
+HC046,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,"domain expire bhayo tara grace period bhitra cha, renew garepachi website automatically live huncha?"
+HC047,Hosting / Cloud Provider,ssl_security,medium,procedural,romanized_nepali_mixed_english,"Let's Encrypt renew fail bhayo because DNS external cha, validation kasari garne?"
+HC048,Hosting / Cloud Provider,support_migration_email,medium,procedural,romanized_nepali_mixed_english,"email outgoing spam ma jancha, SPF DKIM DMARC records kasari set garne?"
+HC049,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,"maintenance email aayeko thiyena tara server restart bhayo, unplanned downtime claim kasari garne?"
+HC050,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,"CNAME root domain ma add garna khojeko error aayo, alternative DNS setup k ho?"
+HC051,Hosting / Cloud Provider,ssl_security,medium,procedural,romanized_nepali_mixed_english,"HTTP bata HTTPS redirect garepachi login loop aayo, hosting side ma ke check garne?"
+HC052,Hosting / Cloud Provider,support_migration_email,medium,procedural,romanized_nepali_mixed_english,support ticket ma root password share garnu safe ho ki temporary access banaune?
+HC053,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,shared hosting ma aru user ko resource abuse le mero site slow bhayo bhane support le migrate garcha?
+HC054,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,"client ko domain external registrar ma cha, hosting yeta cha, DNS records kasari configure garne?"
+HC055,Hosting / Cloud Provider,ssl_security,medium,procedural,romanized_nepali_mixed_english,"wildcard SSL chahiyo for multiple subdomains, DNS challenge support cha ki manual record chahincha?"
+HC056,Hosting / Cloud Provider,support_migration_email,medium,procedural,romanized_nepali_mixed_english,"backup restore garepachi latest orders lost huna sakcha, restore before database dump option cha?"
+HC057,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,"load average high cha tara traffic normal cha, ticket ma kun logs attach garne?"
+HC058,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,email Google Workspace ma ra website hosting server ma rakhna DNS records kasari split garne?
+HC059,Hosting / Cloud Provider,ssl_security,medium,procedural,romanized_nepali_mixed_english,"malware detected bhanera account suspended bhayo, cleanup pachhi unsuspend process k ho?"
+HC060,Hosting / Cloud Provider,support_migration_email,medium,procedural,romanized_nepali_mixed_english,"mailbox full bhayepachi incoming email bounce bhayo, lost email recover huncha?"
+HC061,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,"server reboot pachhi database start bhayena, managed support scope bhitra parcha ki paid admin support?"
+HC062,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,subdomain app.example.com lai VPS IP ma point garne tara main domain shared hosting ma rakhne milcha?
+HC063,Hosting / Cloud Provider,ssl_security,medium,procedural,romanized_nepali_mixed_english,"WAF enable garepachi payment gateway callback block bhayo, whitelist kasari request garne?"
+HC064,Hosting / Cloud Provider,support_migration_email,medium,procedural,romanized_nepali_mixed_english,"cPanel bata database import garda timeout aayo, large SQL import support kasari lina?"
+HC065,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,"VPS ko disk full bhayera service down cha, data loss bina resize kasari request garne?"
+HC066,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,"domain transfer lock enabled cha, unlock and EPP code process kati time lagcha?"
+HC067,Hosting / Cloud Provider,ssl_security,medium,procedural,romanized_nepali_mixed_english,SSL mixed content image URL issue ho ki server config issue ho kasari separate garne?
+HC068,Hosting / Cloud Provider,support_migration_email,medium,procedural,romanized_nepali_mixed_english,"SSH disabled plan ma composer/npm run garna paryo, temporary SSH enable garna milcha?"
+HC069,Hosting / Cloud Provider,server_downtime_sla,medium,procedural,romanized_nepali_mixed_english,"website intermittent down cha, 5 minute ma ekchoti fail huncha, support lai kasari reproduce garne?"
+HC070,Hosting / Cloud Provider,dns_domain,medium,procedural,romanized_nepali_mixed_english,"wrong A record halera site down bhayo, previous DNS backup restore garna milcha?"
+HC071,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,"maile yearly hosting renew gareko 3 din pachhi cancel garna pare, unused period refund huncha ki service credit matra?"
+HC072,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"mero ecommerce site cloud VPS ma cha, DNS external, SSL expired, payment callback fail, priority troubleshoot order k huncha?"
+HC073,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,"VPS upgrade garepachi invoice double charge dekhiyo, old plan prorate kasari calculate huncha?"
+HC074,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"server downtime caused by storage node issue bhane, customer ko SLA credit calculate garna exact outage window kasari define garne?"
+HC075,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,"auto renewal card bata charge bhayo tara maile service use nagarne, refund exception policy k cha?"
+HC076,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"domain expired, DNS stopped, SSL renew fail, email bounce sabai eutai din bhayo, recovery sequence k huncha?"
+HC077,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,"resource overage le account suspend bhayo ra invoice unpaid cha, data backup access pauna pahila pay garnu parcha?"
+HC078,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"VPS snapshot restore garda current data overwrite huncha, partial file restore possible cha ki full rollback matra?"
+HC079,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,"managed VPS plan ma migration included bhaneko cha, but custom app dependency chha, support scope kati samma ho?"
+HC080,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"DDoS mitigation active garda legitimate Nepal traffic block bhayo, geo whitelist kasari request garne?"
+HC081,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,SLA credit ra refund same billing cycle ma combine garna milcha ki SLA credit future invoice ma matra lagcha?
+HC082,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"client site malware infected cha, provider le suspend garyo, cleanup, backup restore, blacklist delisting ko responsibility kasari divide huncha?"
+HC083,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,"domain renewal non-refundable bhaneko cha tara wrong domain renew bhayo, correction possible cha?"
+HC084,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"multi-region failover claim garne provider le Nepal bata latency high cha, SLA availability ra performance SLA separate huncha?"
+HC085,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,server resize during billing cycle ma RAM upgrade immediately huncha tara storage migration downtime kasto huncha?
+HC086,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,"root access client sanga cha, support le config change gareko bhancha, audit log bata responsibility kasari determine garne?"
+HC087,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,student/startup discount apply bhaye pachhi plan downgrade garda discount continue huncha?
+HC088,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,email deliverability issue shared IP reputation le ho bhane dedicated IP upgrade guarantee dincha ki best effort matra?
+HC089,Hosting / Cloud Provider,billing_plan_vps,complex,multi_hop,romanized_nepali_mixed_english,invoice company name ma issue bhayepachi VAT/PAN correction garna legal document chahincha?
+HC090,Hosting / Cloud Provider,complex_cloud_cases,complex,multi_hop,romanized_nepali_mixed_english,managed backup corrupt niskyo bhane provider liability service credit samma ho ki data recovery compensation pani huncha?
+HC091,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"support le 'within 24 hours' bhancha tara SLA document ma P1 response 15 minutes cha, kun policy follow garne?"
+HC092,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"server down bhayo tara provider status page green dekhairako cha, customer-side evidence bata outage prove garna milcha?"
+HC093,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"mero site illegal content ko false abuse report le suspend bhayo, appeal process ma data access pauna milcha?"
+HC094,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"domain transfer request pending ma renewal due bhayo, domain loss avoid garna renew garne ki wait garne?"
+HC095,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"backup restore request ma provider le wrong date restore gardiyo, lost data ko responsibility kasari handle huncha?"
+HC096,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"maile support lai permission diye bina server reboot gareko bhanera claim gare, audit trail ma ke herna parcha?"
+HC097,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"billing non-payment le suspended VPS ma malware attack bhayo, provider security responsibility active service jastai huncha?"
+HC098,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"SSL auto renew fail provider DNS validation bug le bhayo, downtime SLA plus SSL incident credit claim garna milcha?"
+HC099,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"shared hosting fair usage policy vague cha, sudden suspension before warning allowed cha?"
+HC100,Hosting / Cloud Provider,complex_cloud_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"client ko production credentials ticket ma share gareko, support data handling policy le delete/expire garna parcha?"
+PS001,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,simple,fact_lookup,romanized_nepali_mixed_english,"payment failed bhayo tara paisa katyo, k garne?"
+PS002,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,simple,fact_lookup,romanized_nepali_mixed_english,KYC kasari verify garne?
+PS003,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,simple,fact_lookup,romanized_nepali_mixed_english,refund request kasari garne?
+PS004,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,simple,fact_lookup,romanized_nepali_mixed_english,bank transfer kasari garne?
+PS005,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,simple,fact_lookup,romanized_nepali_mixed_english,account hack bhayo k garne?
+PS006,PaySathi Wallet / FinTech Payment Company,bills_topup_services,simple,fact_lookup,romanized_nepali_mixed_english,electricity bill kasari tirne?
+PS007,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,simple,fact_lookup,romanized_nepali_mixed_english,transaction status kasari check garne?
+PS008,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,simple,fact_lookup,romanized_nepali_mixed_english,wallet limit kati cha?
+PS009,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,simple,fact_lookup,romanized_nepali_mixed_english,merchant dispute k ho?
+PS010,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,simple,fact_lookup,romanized_nepali_mixed_english,wallet bata bank withdraw kati charge lagcha?
+PS011,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,simple,fact_lookup,romanized_nepali_mixed_english,suspicious transaction report kasari garne?
+PS012,PaySathi Wallet / FinTech Payment Company,bills_topup_services,simple,fact_lookup,romanized_nepali_mixed_english,internet bill payment failed bhayo k garne?
+PS013,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,simple,fact_lookup,romanized_nepali_mixed_english,refund kati din ma aaucha?
+PS014,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,simple,fact_lookup,romanized_nepali_mixed_english,KYC pending kina cha?
+PS015,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,simple,fact_lookup,romanized_nepali_mixed_english,chargeback garna milcha?
+PS016,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,simple,fact_lookup,romanized_nepali_mixed_english,daily send money limit kati cha?
+PS017,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,simple,fact_lookup,romanized_nepali_mixed_english,PIN change kasari garne?
+PS018,PaySathi Wallet / FinTech Payment Company,bills_topup_services,simple,fact_lookup,romanized_nepali_mixed_english,mobile recharge instant huncha?
+PS019,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,simple,fact_lookup,romanized_nepali_mixed_english,"money deducted but receiver le payena bhanyo, aba?"
+PS020,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,simple,fact_lookup,romanized_nepali_mixed_english,citizenship photo reject bhayo kina?
+PS021,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,simple,fact_lookup,romanized_nepali_mixed_english,"wrong merchant ma payment gayo, k garne?"
+PS022,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,simple,fact_lookup,romanized_nepali_mixed_english,monthly wallet limit kati cha?
+PS023,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,simple,fact_lookup,romanized_nepali_mixed_english,2FA enable kasari garne?
+PS024,PaySathi Wallet / FinTech Payment Company,bills_topup_services,simple,fact_lookup,romanized_nepali_mixed_english,water bill receipt kaha paune?
+PS025,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,simple,fact_lookup,romanized_nepali_mixed_english,transaction id kaha herne?
+PS026,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,simple,fact_lookup,romanized_nepali_mixed_english,name mismatch bhayo bhane k garne?
+PS027,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,simple,fact_lookup,romanized_nepali_mixed_english,refund status kaha herne?
+PS028,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,simple,fact_lookup,romanized_nepali_mixed_english,bank link kasari garne?
+PS029,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,simple,fact_lookup,romanized_nepali_mixed_english,device logout kasari garne?
+PS030,PaySathi Wallet / FinTech Payment Company,bills_topup_services,simple,fact_lookup,romanized_nepali_mixed_english,airline ticket payment support cha?
+PS031,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,simple,fact_lookup,romanized_nepali_mixed_english,pending transaction cancel garna milcha?
+PS032,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,simple,fact_lookup,romanized_nepali_mixed_english,mobile number change garna milcha?
+PS033,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,simple,fact_lookup,romanized_nepali_mixed_english,merchant refund kati din ma process huncha?
+PS034,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,simple,fact_lookup,romanized_nepali_mixed_english,load money minimum kati ho?
+PS035,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,simple,fact_lookup,romanized_nepali_mixed_english,"fraud call aayo, report garna kaha?"
+PS036,PaySathi Wallet / FinTech Payment Company,bills_topup_services,simple,fact_lookup,romanized_nepali_mixed_english,school fee pay garna milcha?
+PS037,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,simple,fact_lookup,romanized_nepali_mixed_english,QR payment fail bhayo kina?
+PS038,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,simple,fact_lookup,romanized_nepali_mixed_english,password reset kasari garne?
+PS039,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,simple,fact_lookup,romanized_nepali_mixed_english,complaint ticket kasari open garne?
+PS040,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,simple,fact_lookup,romanized_nepali_mixed_english,withdrawal pending kina cha?
+PS041,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,medium,procedural,romanized_nepali_mixed_english,"maile merchant QR scan gare, PaySathi ma success cha tara merchant le payment receive bhayena bhancha, dispute kasari kholne?"
+PS042,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,medium,procedural,romanized_nepali_mixed_english,"mero KYC 3 din dekhi review ma cha, urgent transaction limit badhauna temporary approval milcha?"
+PS043,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,medium,procedural,romanized_nepali_mixed_english,"merchant le goods deliver garena tara payment settle bhayo, PaySathi le refund guarantee garcha ki dispute mediate matra?"
+PS044,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,medium,procedural,romanized_nepali_mixed_english,"mero phone harayo ra SIM pani active cha, PaySathi wallet immediately block garna k garnu parcha?"
+PS045,PaySathi Wallet / FinTech Payment Company,bills_topup_services,medium,procedural,romanized_nepali_mixed_english,"electricity bill due date ma PaySathi success dekhayo tara NEA portal ma unpaid cha, late fee ko responsibility kasari decide huncha?"
+PS046,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,medium,procedural,romanized_nepali_mixed_english,"bank account bata wallet load garda amount deducted bhayo tara wallet balance badhena, reference number kun dine?"
+PS047,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,medium,procedural,romanized_nepali_mixed_english,"citizenship ma old address cha tara current address different cha, KYC ma kun address halne?"
+PS048,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,medium,procedural,romanized_nepali_mixed_english,"maile online course ko payment gareko tara access aayena, merchant response nadida escalation kati din ma huncha?"
+PS049,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,medium,procedural,romanized_nepali_mixed_english,"phishing link ma PIN haleko thaha bhayo tara transaction ajhai bhayeko chaina, preventive freeze possible cha?"
+PS050,PaySathi Wallet / FinTech Payment Company,bills_topup_services,medium,procedural,romanized_nepali_mixed_english,"internet bill payment ma customer ID wrong halyo, amount arko account ma credit bhayo, reversal possible cha?"
+PS051,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,medium,procedural,romanized_nepali_mixed_english,"electricity bill pay garda transaction pending cha, bill due date aaja ho, double pay garna huncha ki wait garne?"
+PS052,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,medium,procedural,romanized_nepali_mixed_english,passport bata KYC garna milcha ki Nepali citizenship mandatory ho?
+PS053,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,medium,procedural,romanized_nepali_mixed_english,"QR code wrong counter ko scan bhayo, merchant branch same company ho bhane transfer possible cha?"
+PS054,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,medium,procedural,romanized_nepali_mixed_english,"unknown device login notification aayo, password change gare enough ho ki all sessions logout garne?"
+PS055,PaySathi Wallet / FinTech Payment Company,bills_topup_services,medium,procedural,romanized_nepali_mixed_english,"mobile topup wrong number ma gayo, operator reversal support garcha ki final transaction ho?"
+PS056,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,medium,procedural,romanized_nepali_mixed_english,"mobile topup failed bhayo tara balance katyo, telco confirmation chahincha ki PaySathi ticket enough?"
+PS057,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,medium,procedural,romanized_nepali_mixed_english,maile naam spelling wrong haleko chu KYC submit bhayepachi edit kasari garne?
+PS058,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,medium,procedural,romanized_nepali_mixed_english,"cashback campaign ma eligible transaction thiyo tara cashback aayena, terms verify garna kun screenshot chahincha?"
+PS059,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,medium,procedural,romanized_nepali_mixed_english,fraud transaction report garepachi police report mandatory ho?
+PS060,PaySathi Wallet / FinTech Payment Company,bills_topup_services,medium,procedural,romanized_nepali_mixed_english,"school fee payment garepachi receipt school ko format ma chahiyo, PaySathi receipt enough ho?"
+PS061,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,medium,procedural,romanized_nepali_mixed_english,"payment timeout bhayo, app close garepachi success SMS aayo, order confirm bhayena, refund process k ho?"
+PS062,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,medium,procedural,romanized_nepali_mixed_english,"selfie verification fail bhayo because camera blur, resubmit limit kati choti cha?"
+PS063,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,medium,procedural,romanized_nepali_mixed_english,"refund approved bhayo tara wallet statement ma reversal label dekhaena, audit trail kasari download garne?"
+PS064,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,medium,procedural,romanized_nepali_mixed_english,OTP maile share gareko bhaye customer negligence bhanera refund deny huncha ki investigation huncha?
+PS065,PaySathi Wallet / FinTech Payment Company,bills_topup_services,medium,procedural,romanized_nepali_mixed_english,"airline ticket payment pending ma fare expire bhayo, amount refund huncha ki ticket confirm huncha?"
+PS066,PaySathi Wallet / FinTech Payment Company,failed_payment_deducted,medium,procedural,romanized_nepali_mixed_english,"merchant le cash pani liyo ani QR payment pani success bhayo, duplicate charge dispute kasari file garne?"
+PS067,PaySathi Wallet / FinTech Payment Company,kyc_limits_account,medium,procedural,romanized_nepali_mixed_english,"mobile number lost bhayo ra OTP aayena, account recovery ko lagi ke documents chahincha?"
+PS068,PaySathi Wallet / FinTech Payment Company,refunds_disputes_merchant,medium,procedural,romanized_nepali_mixed_english,"merchant dispute ma PaySathi le both sides ko evidence mangcha, customer le ke submit garne?"
+PS069,PaySathi Wallet / FinTech Payment Company,security_fraud_account_recovery,medium,procedural,romanized_nepali_mixed_english,account freeze garepachi pending refund receive huncha ki hold ma jancha?
+PS070,PaySathi Wallet / FinTech Payment Company,bills_topup_services,medium,procedural,romanized_nepali_mixed_english,"scheduled bill payment failed due to low balance, retry automatic huncha ki manual pay garnu parcha?"
+PS071,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"maile KYC verified chu tara large merchant payment fail bhayo, daily limit, merchant category limit, bank gateway limit madhye kasari identify garne?"
+PS072,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"maile ecommerce merchant lai PaySathi bata pay gare, transaction success, order failed, merchant refund pending, wallet limit hit, aba money kahile ra kasari aaucha?"
+PS073,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"wallet ma Rs 50000 cha, bank withdraw garda partial success bhayo, remaining balance hold ma cha, release process k ho?"
+PS074,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"KYC pending account bata large QR payment attempt bhayo, amount deducted, transaction review ma cha, customer lai service dinu parcha ki wait garnu parcha?"
+PS075,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"same din ma bank load, send money, QR payment gare, monthly limit exceed bhayo bhane kun transaction reject huncha?"
+PS076,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"bank load failed, wallet balance badhena, bank bata deducted, same amount maile second time load gare success bhayo, duplicate refund ko risk kasari handle garne?"
+PS077,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"business merchant settlement ra personal wallet limit confuse bhayo, merchant dashboard ko limit separate ho?"
+PS078,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"merchant dispute ma customer le goods not received bhancha, merchant le delivery proof dincha, PaySathi le final decision kun evidence basis ma garne?"
+PS079,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"bank linked account closed bhayo tara withdrawal pending gayo, reversal PaySathi wallet ma aaucha ki bank reject pachi?"
+PS080,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"wrong number send money gareko receiver le amount withdraw gari sakyo, PaySathi reversal policy, legal request, account freeze sequence k huncha?"
+PS081,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"wallet to wallet transfer wrong number ma gayo, receiver verified merchant ho, consent bina reversal legal huncha?"
+PS082,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"phishing fraud ma customer le OTP share gareko, transaction merchant account ma gayo, merchant suspicious cha, refund ra investigation flow k huncha?"
+PS083,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"KYC upgrade pending bela transaction limit hit bhayo, queued transaction auto process huncha ki retry garnu parcha?"
+PS084,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"utility bill success cha tara provider system ma failed, provider late fee lagayo, PaySathi compensation policy lagu huncha?"
+PS085,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"Nepal bata international card payment chahiyo, PaySathi wallet le forex transaction block garcha ki supported merchant only?"
+PS086,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"cashback campaign ma user eligible thiyo tara transaction refunded bhayo, cashback clawback huncha ki user le retain garcha?"
+PS087,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,payment split garera limit bypass garna policy violation ho ki allowed?
+PS088,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"wallet account locked during pending merchant refund, refund credit huncha ki account unlock pachi matra visible huncha?"
+PS089,PaySathi Wallet / FinTech Payment Company,wallet_limits_transfers,complex,multi_hop,romanized_nepali_mixed_english,"high value transaction review ma hold bhayo, customer lai hold reason disclose garna milcha?"
+PS090,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,multi_hop,romanized_nepali_mixed_english,"chargeback, wallet refund, merchant settlement reversal tinai terms customer lai confuse cha, simple explanation kasari dinu?"
+PS091,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"support le refund 3 din bhancha tara terms ma 7 business days bhancha, customer lai correct SLA ke bhanne?"
+PS092,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"maile intentionally wrong merchant pay gareko haina, QR sticker tampered thiyo, PaySathi liability proof kasari establish garne?"
+PS093,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"transaction failed dekhayera maile cash diye, pachhi digital payment success bhayo, merchant cash return nagare PaySathi ke garna sakcha?"
+PS094,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,KYC data delete garna request garepachi financial record retention law le kati samma data rakhna milcha?
+PS095,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"customer le bank statement dherai personal data blur gareko cha, verification ko lagi minimum visible fields k hun?"
+PS096,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"wallet limit bypass garna multiple PaySathi accounts banayeko cha, funds freeze huncha ki accounts merge garna milcha?"
+PS097,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,fraud report false prove bhayo bhane customer account ma penalty lagcha?
+PS098,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"merchant dispute window expire bhayo tara customer hospitalized thiyo, exception process cha?"
+PS099,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,"transaction receipt screenshot edited jasto cha, PaySathi genuine receipt verify garna public method cha?"
+PS100,PaySathi Wallet / FinTech Payment Company,complex_payment_cases,complex,adversarial_edge_case,romanized_nepali_mixed_english,regulatory compliance le suspicious transaction report garda customer lai exact reason disclose garna namilne case huna sakcha?

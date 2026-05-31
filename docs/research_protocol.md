@@ -6,6 +6,7 @@ This benchmark compares retrieval-augmented generation architectures on the same
 
 - Same evaluation query set
 - Same ChitoMart business document corpus
+- Company corpora are stored under `data/business_docs/<company>/`
 - Same embedding model unless explicitly documented
 - Same answer output schema
 - Same evaluation rubric in later phases

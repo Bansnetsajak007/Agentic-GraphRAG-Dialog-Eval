@@ -1,8 +1,9 @@
-"""Gemini and NVIDIA chat clients for answer generation."""
+"""OpenAI-compatible, Gemini, and NVIDIA chat clients for answer generation."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
+import random
 import time
 from typing import Any
 
@@ -18,18 +19,23 @@ class ChatConfig:
     model: str
     api_key: str | None
     base_url: str
+    api_keys: tuple[str, ...] = ()
     temperature: float = 0.0
     timeout_seconds: float = 60.0
-    max_retries: int = 5
+    max_retries: int = 12
 
 
 class ProviderChat:
-    """Small HTTP wrapper for Gemini and NVIDIA chat generation."""
+    """Small HTTP wrapper for OpenAI-compatible, Gemini, and NVIDIA chat generation."""
 
     def __init__(self, config: ChatConfig):
         self.provider = config.provider.lower()
         self.model = config.model
-        self.api_key = config.api_key
+        primary_key = () if config.api_key is None else (config.api_key,)
+        self.api_keys = self._dedupe_keys(primary_key + config.api_keys)
+        self.api_key = self.api_keys[0] if self.api_keys else None
+        self.key_index = 0
+        self.disabled_key_indices: set[int] = set()
         self.base_url = config.base_url.rstrip("/")
         self.temperature = config.temperature
         self.timeout_seconds = config.timeout_seconds
@@ -37,16 +43,38 @@ class ProviderChat:
 
     @property
     def generation_enabled(self) -> bool:
-        return bool(self.api_key)
+        return bool(self.api_keys)
 
     def complete(self, system_prompt: str, user_prompt: str) -> str:
         if not self.api_key:
             return GENERATION_SKIPPED_MESSAGE
         if self.provider == "gemini":
             return self._complete_gemini(system_prompt, user_prompt)
+        if self.provider == "openai":
+            return self._complete_openai(system_prompt, user_prompt)
         if self.provider == "nvidia":
             return self._complete_nvidia(system_prompt, user_prompt)
-        raise ValueError(f"Unsupported LLM_PROVIDER '{self.provider}'. Use 'gemini' or 'nvidia'.")
+        raise ValueError(f"Unsupported LLM_PROVIDER '{self.provider}'. Use 'openai', 'gemini', or 'nvidia'.")
+
+    def _complete_openai(self, system_prompt: str, user_prompt: str) -> str:
+        payload = {
+            "model": self.model,
+            "temperature": self.temperature,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+        }
+        response = self._post_json_with_retries(
+            f"{self.base_url}/chat/completions",
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+        )
+        data = response.json()
+        return str(data["choices"][0]["message"].get("content") or "")
 
     def _complete_nvidia(self, system_prompt: str, user_prompt: str) -> str:
         payload = {
@@ -82,10 +110,12 @@ class ProviderChat:
         response = self._post_json_with_retries(
             f"{self.base_url}/models/{self.model}:generateContent",
             headers={
-                "x-goog-api-key": self.api_key,
+                "x-goog-api-key": "{api_key}",
                 "Content-Type": "application/json",
             },
             json=payload,
+            rotate_keys=True,
+            randomize_key=True,
         )
         data = response.json()
         parts = data["candidates"][0]["content"].get("parts", [])
@@ -96,15 +126,21 @@ class ProviderChat:
         url: str,
         headers: dict[str, str],
         json: dict[str, Any],
+        rotate_keys: bool = False,
+        randomize_key: bool = False,
     ) -> httpx.Response:
         retryable_statuses = {429, 500, 502, 503, 504}
         last_error: Exception | None = None
 
+        if randomize_key:
+            self._select_random_key()
+
         for attempt in range(self.max_retries + 1):
             try:
+                request_headers = self._headers_for_current_key(headers)
                 response = httpx.post(
                     url,
-                    headers=headers,
+                    headers=request_headers,
                     json=json,
                     timeout=self.timeout_seconds,
                 )
@@ -116,12 +152,68 @@ class ProviderChat:
                 last_error = exc
                 if attempt >= self.max_retries:
                     raise
-                sleep_seconds = self._retry_sleep_seconds(exc, attempt)
+                if rotate_keys and self._should_disable_key(exc):
+                    self.disabled_key_indices.add(self.key_index)
+                rotated = rotate_keys and self._should_rotate_key(exc) and self._select_different_key()
+                sleep_seconds = self._sleep_after_retry(exc, attempt, rotated)
                 time.sleep(sleep_seconds)
 
         if last_error:
             raise last_error
         raise RuntimeError("Provider request failed without a response.")
+
+    def _headers_for_current_key(self, headers: dict[str, str]) -> dict[str, str]:
+        current_key = self.api_key or ""
+        return {key: value.replace("{api_key}", current_key) for key, value in headers.items()}
+
+    def _rotate_key(self) -> bool:
+        if len(self.api_keys) <= 1:
+            return False
+        self.key_index = (self.key_index + 1) % len(self.api_keys)
+        self.api_key = self.api_keys[self.key_index]
+        return True
+
+    def _select_random_key(self) -> bool:
+        active_indices = self._active_key_indices()
+        if len(active_indices) <= 1:
+            return False
+        self.key_index = random.choice(active_indices)
+        self.api_key = self.api_keys[self.key_index]
+        return True
+
+    def _select_different_key(self) -> bool:
+        active_indices = self._active_key_indices()
+        if len(active_indices) <= 1:
+            return False
+        current_index = self.key_index
+        choices = [index for index in active_indices if index != current_index]
+        if not choices:
+            return False
+        self.key_index = random.choice(choices)
+        self.api_key = self.api_keys[self.key_index]
+        return True
+
+    def _active_key_indices(self) -> list[int]:
+        return [index for index in range(len(self.api_keys)) if index not in self.disabled_key_indices]
+
+    @staticmethod
+    def _should_rotate_key(exc: Exception) -> bool:
+        return isinstance(exc, httpx.HTTPStatusError) and exc.response.status_code in {403, 429, 503}
+
+    @staticmethod
+    def _should_disable_key(exc: Exception) -> bool:
+        return isinstance(exc, httpx.HTTPStatusError) and exc.response.status_code == 403
+
+    @staticmethod
+    def _dedupe_keys(keys: tuple[str, ...]) -> tuple[str, ...]:
+        deduped: list[str] = []
+        seen: set[str] = set()
+        for key in keys:
+            clean_key = key.strip()
+            if clean_key and clean_key not in seen:
+                deduped.append(clean_key)
+                seen.add(clean_key)
+        return tuple(deduped)
 
     @staticmethod
     def _retry_sleep_seconds(exc: Exception, attempt: int) -> float:
@@ -134,3 +226,10 @@ class ProviderChat:
                     pass
             return 60.0
         return float(min(2**attempt, 8))
+
+    def _sleep_after_retry(self, exc: Exception, attempt: int, rotated: bool) -> float:
+        if isinstance(exc, httpx.HTTPStatusError) and exc.response.status_code == 429:
+            return self._retry_sleep_seconds(exc, attempt)
+        if not rotated:
+            return self._retry_sleep_seconds(exc, attempt)
+        return 0.1

@@ -21,6 +21,9 @@ class FakeEmbedder:
     def encode(self, texts: list[str]) -> list[list[float]]:
         return [[0.1, 0.2, 0.3] for _ in texts]
 
+    def encode_query(self, text: str) -> list[float]:
+        return [0.1, 0.2, 0.3]
+
 
 def test_semantic_retriever_returns_expected_structure(monkeypatch) -> None:
     monkeypatch.setattr(semantic_retriever, "get_or_create_collection", lambda *_args, **_kwargs: FakeCollection())

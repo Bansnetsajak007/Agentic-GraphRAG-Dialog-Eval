@@ -36,6 +36,19 @@ class EvalQuery(BaseModel):
     notes: str = ""
 
 
+class EvaluationQuery(BaseModel):
+    """Normalized query row from the Romanized Nepali RAG evaluation dataset."""
+
+    query_id: str
+    company: str
+    query: str
+    difficulty: str
+    category: str
+    expected_document: str | None = None
+    expected_topic: str | None = None
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
 class Prediction(BaseModel):
     model_config = ConfigDict(coerce_numbers_to_str=False)
 
@@ -46,4 +59,27 @@ class Prediction(BaseModel):
     retrieved_context: list[RetrievedChunk]
     answer: str
     latency_ms: int
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class EvaluationResult(BaseModel):
+    """JSONL output record for architecture evaluation runs."""
+
+    model_config = ConfigDict(coerce_numbers_to_str=False)
+
+    query_id: str
+    architecture: str
+    company: str
+    company_key: str | None = None
+    query: str
+    difficulty: str
+    category: str
+    expected_document: str | None = None
+    expected_topic: str | None = None
+    answer: str = ""
+    retrieved_chunks: list[RetrievedChunk] = Field(default_factory=list)
+    source_documents: list[str] = Field(default_factory=list)
+    latency_ms: int = 0
+    token_usage: dict[str, int] | None = None
+    error: str | None = None
     metadata: dict[str, Any] = Field(default_factory=dict)

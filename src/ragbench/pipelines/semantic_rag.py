@@ -61,6 +61,8 @@ class SemanticRAGPipeline:
                 "top_k": self.top_k,
                 "embedding_model": self.embedding_model_name,
                 "embedding_backend": self.retriever.embedder.backend,
+                "collection_name": self.retriever.collection_name,
+                "company_index": self.retriever.company,
                 "llm_model": self.chat_model.model,
                 "llm_provider": self.chat_model.provider,
                 "generation_enabled": self.chat_model.generation_enabled,
