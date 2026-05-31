@@ -1,0 +1,78 @@
+{
+  "architectures": {
+    "traditional_rag": {
+      "row_count": 300,
+      "expected_row_count": 300,
+      "row_count_valid": true,
+      "duplicate_query_ids": [],
+      "judge_error_count": 0,
+      "judge_error_rate": 0.0,
+      "judge_model": "gpt-5.2"
+    },
+    "agentic_rag": {
+      "row_count": 300,
+      "expected_row_count": 300,
+      "row_count_valid": true,
+      "duplicate_query_ids": [],
+      "judge_error_count": 0,
+      "judge_error_rate": 0.0,
+      "judge_model": "gpt-5.2"
+    },
+    "agentic_graph_rag": {
+      "row_count": 300,
+      "expected_row_count": 300,
+      "row_count_valid": true,
+      "duplicate_query_ids": [],
+      "judge_error_count": 0,
+      "judge_error_rate": 0.0,
+      "judge_model": "gpt-5.2"
+    }
+  },
+  "query_id_alignment": {
+    "valid": true,
+    "mismatches": []
+  },
+  "field_alignment": {
+    "valid": true,
+    "mismatches": []
+  },
+  "metric_validation": {
+    "malformed_scores": [],
+    "missing_counts": {
+      "token_usage": 900,
+      "agent_steps": 900,
+      "tool_calls": 900
+    }
+  },
+  "valid": true,
+  "available_metrics": [
+    "overall_score",
+    "context_precision",
+    "context_recall",
+    "context_relevancy",
+    "hit_rate_at_k",
+    "mrr_at_k",
+    "ndcg_at_k",
+    "average_retrieved_chunks",
+    "faithfulness",
+    "answer_relevancy",
+    "answer_correctness",
+    "answer_completeness",
+    "policy_compliance",
+    "hallucination_rate",
+    "romanized_query_understanding",
+    "code_mixed_handling",
+    "intent_classification_accuracy",
+    "company_domain_accuracy",
+    "escalation_correctness",
+    "tone_appropriateness",
+    "latency_ms",
+    "success",
+    "failure"
+  ],
+  "unavailable_metrics": [
+    "token_usage",
+    "agent_steps",
+    "tool_calls"
+  ]
+}

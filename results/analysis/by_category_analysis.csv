@@ -1,0 +1,13 @@
+category,architecture,n,mean_overall_score,ci95_low,ci95_high,mean_latency_ms,p95_latency_ms,judge_error_count,best_architecture_for_group,practical_interpretation
+adversarial_edge_case,agentic_graph_rag,30,0.6939265750957267,0.6664690275567392,0.7212962469389135,2641.866666666667,3714.499999999999,0,agentic_rag,performance is practically tied with best architecture
+adversarial_edge_case,agentic_rag,30,0.6979682417623934,0.6697138249835428,0.7262698471304336,2274.866666666667,2933.25,0,agentic_rag,best mean score in this stratum
+adversarial_edge_case,traditional_rag,30,0.6966487973179489,0.6679390009022768,0.7247574406956744,2307.9666666666667,2968.55,0,agentic_rag,performance is practically tied with best architecture
+fact_lookup,agentic_graph_rag,120,0.8147052196976027,0.7952000244111026,0.833851765859289,2428.2,3379.35,0,agentic_rag,performance is practically tied with best architecture
+fact_lookup,agentic_rag,120,0.8156531363642693,0.796376203261697,0.8348418557894478,2767.7083333333335,3588.1,0,agentic_rag,best mean score in this stratum
+fact_lookup,traditional_rag,120,0.8150142474753804,0.795316530161459,0.8343573500111279,2503.225,3591.9499999999994,0,agentic_rag,performance is practically tied with best architecture
+multi_hop,agentic_graph_rag,60,0.7644024248759023,0.736835395190354,0.791985031077902,2607.9166666666665,3896.95,0,agentic_graph_rag,best mean score in this stratum
+multi_hop,agentic_rag,60,0.7618399248759022,0.7352394550752435,0.7888342174176629,2921.3166666666666,3912.3999999999987,0,agentic_graph_rag,performance is practically tied with best architecture
+multi_hop,traditional_rag,60,0.7633538137647912,0.7364304584021593,0.7902073349959222,2820.6,3587.2,0,agentic_graph_rag,performance is practically tied with best architecture
+procedural,agentic_graph_rag,90,0.805767417924202,0.7854977502396234,0.8256692654726931,4474.4111111111115,3510.0499999999993,0,agentic_graph_rag,best mean score in this stratum
+procedural,agentic_rag,90,0.8032072327390167,0.7825795012311981,0.8235889343623943,2395.266666666667,3232.8999999999996,0,agentic_graph_rag,performance is practically tied with best architecture
+procedural,traditional_rag,90,0.8010266771834613,0.779705442862958,0.821598496237804,2426.6111111111113,3421.4999999999995,0,agentic_graph_rag,performance is practically tied with best architecture

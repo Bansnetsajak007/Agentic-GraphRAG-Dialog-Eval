@@ -1,0 +1,10 @@
+company,architecture,n,mean_overall_score,ci95_low,ci95_high,mean_latency_ms,p95_latency_ms,judge_error_count,best_architecture_for_group,practical_interpretation
+Hosting / Cloud Provider,agentic_graph_rag,100,0.7837175446252199,0.7612355970889413,0.8050988538846582,4133.93,3242.05,0,agentic_rag,performance is practically tied with best architecture
+Hosting / Cloud Provider,agentic_rag,100,0.7838883779585533,0.7619793741481001,0.8049547900201034,2721.5,3450.3,0,agentic_rag,best mean score in this stratum
+Hosting / Cloud Provider,traditional_rag,100,0.7835675446252199,0.7615739215267187,0.8046324082974139,2713.23,4218.399999999999,0,agentic_rag,performance is practically tied with best architecture
+PaySathi Wallet / FinTech Payment Company,agentic_graph_rag,100,0.752756699140687,0.7317118054186275,0.7736609848005895,2898.44,4122.9,0,agentic_graph_rag,best mean score in this stratum
+PaySathi Wallet / FinTech Payment Company,agentic_rag,100,0.750569199140687,0.7291821783898994,0.7717459427613559,2603.11,3548.7999999999997,0,agentic_graph_rag,performance is practically tied with best architecture
+PaySathi Wallet / FinTech Payment Company,traditional_rag,100,0.748694199140687,0.7271982876824082,0.7700295274218771,2633.33,3690.7499999999995,0,agentic_graph_rag,performance is practically tied with best architecture
+QuickCommerce / E-commerce Company,agentic_graph_rag,100,0.8331821234572575,0.8152495036286801,0.8507669414498854,2265.75,2983.7999999999997,0,agentic_rag,performance is practically tied with best architecture
+QuickCommerce / E-commerce Company,agentic_rag,100,0.8337071234572575,0.8157609877052846,0.8512083182437904,2587.63,3575.7499999999995,0,agentic_rag,best mean score in this stratum
+QuickCommerce / E-commerce Company,traditional_rag,100,0.8336862901239241,0.8157315036479579,0.8514360944261404,2226.01,2948.1499999999996,0,agentic_rag,performance is practically tied with best architecture

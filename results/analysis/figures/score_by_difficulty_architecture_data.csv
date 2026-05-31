@@ -1,0 +1,10 @@
+difficulty,architecture,n,mean_overall_score,ci95_low,ci95_high,mean_latency_ms,p95_latency_ms,judge_error_count,best_architecture_for_group,practical_interpretation
+complex,agentic_graph_rag,90,0.7409104749491772,0.7189143631989336,0.7625108359641398,2619.233333333333,3891.1000000000004,0,traditional_rag,performance is practically tied with best architecture
+complex,agentic_rag,90,0.740549363838066,0.7192515507138872,0.761712731876665,2705.8333333333335,3498.75,0,traditional_rag,performance is practically tied with best architecture
+complex,traditional_rag,90,0.7411188082825104,0.7194971598005024,0.7623736484139906,2649.722222222222,3414.8499999999995,0,traditional_rag,best mean score in this stratum
+medium,agentic_graph_rag,90,0.805767417924202,0.7854977502396234,0.8256692654726931,4474.4111111111115,3510.0499999999993,0,agentic_graph_rag,best mean score in this stratum
+medium,agentic_rag,90,0.8032072327390167,0.7825795012311981,0.8235889343623943,2395.266666666667,3232.8999999999996,0,agentic_graph_rag,performance is practically tied with best architecture
+medium,traditional_rag,90,0.8010266771834613,0.779705442862958,0.821598496237804,2426.6111111111113,3421.4999999999995,0,agentic_graph_rag,performance is practically tied with best architecture
+simple,agentic_graph_rag,120,0.8147052196976027,0.7952000244111026,0.833851765859289,2428.2,3379.35,0,agentic_rag,performance is practically tied with best architecture
+simple,agentic_rag,120,0.8156531363642693,0.796376203261697,0.8348418557894478,2767.7083333333335,3588.1,0,agentic_rag,best mean score in this stratum
+simple,traditional_rag,120,0.8150142474753804,0.795316530161459,0.8343573500111279,2503.225,3591.9499999999994,0,agentic_rag,performance is practically tied with best architecture
